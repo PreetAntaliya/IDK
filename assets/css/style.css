@@ -1,0 +1,152 @@
+:root{
+	--btn-hover:#995d2170;
+	--primary-color:#d9842f;
+	--white-color:#FFFFFF;
+	--nav-bg:#333333;
+	--roboto:'Roboto';
+	--squada:'Squada One';
+	--fs-14:14px;
+	--fs-16:16px;
+	--fs-20:20px;
+	--fs-22:22px;
+	--fs-24:24px;
+	--fs-36:36px;
+	--fs-55:55px;
+	--fs-70:70px;
+	--fw-400:400;
+	--fw-500:500;
+	--fw-600:600;
+	--fw-700:700;
+	--fw-900:900;
+	--lh:1.5;
+	--padding-left:12px;
+	--padding-right:12px;
+	--bg-color:#112429;
+}
+
+header{
+	position: absolute;
+	top: 1.875rem;
+	width: 100%;
+	z-index: 10;
+}
+nav{
+	max-width: 1180px;
+	margin: 0 auto;
+}
+header nav ul li ul {
+	/* display: none; */
+	list-style: none;
+}
+
+.nav-item .sub-menu2 li a{
+	position: relative;
+	z-index: 1;
+}
+.nav-item .sub-menu2 li a::after{
+	position: absolute;
+    content: '';
+    box-sizing: border-box;
+    background-color: var(--primary-color);
+    width: 0;
+    height: 100%;
+    left: 0;
+    top: 0;
+    transition: 1s;
+    z-index: -1;
+}
+.nav-item .sub-menu2 li a:hover::after{
+	width: 100%;
+}
+.collapes ul li .sub-menu2 li{
+	width: 100%;
+}
+.collapes ul li .sub-menu2 li a{
+	padding: 10px 15px;
+	width: 100%;
+	display: inline-block;
+}
+.collapes ul li .sub-menu2{
+	position: absolute;
+	width: 200px;
+	background-color: var(--nav-bg);
+	opacity: 0;
+}
+.nav-item:hover .sub-menu2{
+	display: block;
+	opacity: 1;
+	top: 100%;
+}
+header nav ul {
+	list-style: none;
+}
+.dropdown-menu::before{
+    content: "";
+    top: -19px;
+    left: 10px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    background: transparent;
+    border-left: 8px solid transparent;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid #d9842f;
+    border-right: 8px solid transparent;
+}
+.dropdown-menu:hover{
+	height: 50px;
+	width: 100px;
+}
+.navbar .nav-item {
+    position: relative;
+    padding: 20px 0;
+    margin: 0px 12px;
+}
+.overlay{
+	background-image: url(../img/main.webp);
+	height: 100vh;
+	background-repeat: no-repeat;
+}
+.overlay:before{
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+	opacity: 0.6;
+    left: 0;
+    background-color: #000;
+}
+nav ul li a{
+	color: var(--white-color);
+	font-weight: 500;
+}
+.main-logo i{
+	font-size: 30px;
+	padding: 0 20px;
+}
+.collapes .btn{
+	padding: 16px 45px;
+	position: relative;
+	border: 0;
+	background-color: var(--primary-color);
+	cursor: pointer;
+	z-index: 0;
+}
+.collapes .btn:before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    width: 0;
+    height: 100%;
+    background-color: #995d2170;
+    transition: all .4s linear;
+}
+.collapes .btn:hover::before {
+    left: 0;
+	right: auto;
+	width: 100%;
+}
